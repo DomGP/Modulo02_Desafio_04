@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: starWarsFont;
+    src: url(../fonts/SFDistantGalaxy.ttf);
+}
+@font-face {
+    font-family: righteousRegular;
+    src: url(../fonts/Righteous-Regular.ttf);
+}
+/* Versión Mobile */
+body{
+    background-image: url("/assets/imgs/starwars.jpeg.jpeg");
+    font-family: 'righteousRegular';
+}
+header{
+    display: grid;
+    grid-template-areas: 
+    'nav'
+    'aside'
+    'main'
+    'footer';
+    grid-template-rows: 1fr 1fr 9fr 1fr;
+    height: 100vh;
+}
+nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+    background-color:#e5703d;
+    color: white;
+    padding: 0.5em;
+}
+aside{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: aside;
+    background-color: #f0ece1;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+aside img{
+    width: 40px;
+    height: 40px;
+    margin-left: 1em;
+}
+.style-link{
+    display: flex;
+    gap: 5px;
+    margin-right: 1em;
+}
+main{
+    grid-area: main;
+}
+.grid-cards{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+    justify-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 0.2em #dd4e1e;
+}
+main img{
+    width:350px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    
+}
+footer{
+    grid-area: footer;
+    background-color: #3b444b;
+    color: white;
+    padding: 0.5em;
+}
+
+/* Versión Tablet */
+@media(min-width:576px){
+header{
+    grid-template-areas:
+    'nav nav'
+    'aside main'
+    'footer main';
+    grid-template-columns: 2fr 10fr ;
+    grid-template-rows:1fr 10fr 1fr ;
+}
+.grid-cards{
+    grid-template-columns: auto auto;   
+}
+}
+
+/* Versión Escritorio */
+@media(min-width:992px){
+header{
+    grid-template-areas:
+    'nav nav'
+    'aside main'
+    'footer footer';
+    grid-template-rows: 1fr 1fr 9fr 1fr;
+    height: 100vh;
+}
+}
