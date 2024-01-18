@@ -56,6 +56,8 @@ aside img{
 }
 main{
     grid-area: main;
+    padding-top:1em ;
+    padding-bottom: 1em;
 }
 .grid-cards{
     display: grid;
@@ -68,19 +70,27 @@ main{
     flex-direction: column;
     align-items: center;
     border: solid 0.2em #dd4e1e;
+    width: 80%;
 }
-main img{
-    width:350px;
+.card img{
+    width:100%;
     background-size: cover;
     background-position: center;
     object-fit: cover;
     
 }
 footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-area: footer;
     background-color: #3b444b;
     color: white;
     padding: 0.5em;
+}
+footer p {
+    text-align: center;
 }
 
 /* Versión Tablet */
@@ -89,9 +99,9 @@ header{
     grid-template-areas:
     'nav nav'
     'aside main'
-    'footer main';
-    grid-template-columns: 2fr 10fr ;
+    'footer footer';
     grid-template-rows:1fr 10fr 1fr ;
+    grid-template-columns: 2fr 10fr ;
 }
 .grid-cards{
     grid-template-columns: auto auto;   
@@ -104,8 +114,11 @@ header{
     grid-template-areas:
     'nav nav'
     'aside main'
-    'footer footer';
-    grid-template-rows: 1fr 1fr 9fr 1fr;
+    'footer main';
+    grid-template-rows: 1fr 10fr 1fr;
     height: 100vh;
+}
+.grid-cards{
+    grid-template-columns: auto auto auto;
 }
 }
