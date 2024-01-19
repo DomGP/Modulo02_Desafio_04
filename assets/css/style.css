@@ -33,7 +33,7 @@ nav{
     grid-area: nav;
     background-color:#e5703d;
     color: white;
-    padding: 0.5em;
+    padding: 2em;
 }
 aside{
     display: flex;
@@ -44,7 +44,7 @@ aside{
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
-aside img{
+.box-vader{
     width: 40px;
     height: 40px;
     margin-left: 1em;
@@ -64,22 +64,21 @@ main{
     grid-template-columns: auto;
     gap: 50px;
     justify-items: center;
+    align-items: center;
 }
 .card{
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: solid 0.2em #dd4e1e;
-    width: 70%;
+    width:70%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    filter:grayscale(100%);
+    transition:filter 1s ease-in-out;
 }
-.card img{
-    width:100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    
+.card:hover{
+    filter: grayscale(0%);
 }
+
 footer{
     display: flex;
     flex-direction: column;
@@ -109,10 +108,15 @@ aside{
     justify-content: flex-start;
     padding: 2em;
 }
-aside img{
-    width: 70px;
-    height: 70px;
+.box-vader{
+    width: 100px;
+    height: 100px;
     margin: 0;
+    transform: rotate(0deg);
+    transition: transform 4s;
+}
+.box-vader:hover{
+    transform: rotate(360deg);
 }
 .style-link{
     padding-top: 2em;
@@ -160,7 +164,6 @@ aside:hover{
 .box-vader:hover{
     width: 250px;
     height: 250px;
-
 }
 .grid-cards{
     grid-template-columns: auto auto auto;
