@@ -26,6 +26,10 @@ header{
     grid-template-rows: 1fr 1fr 9fr 1fr;
     height: 100vh;
 }
+h1{
+    font-size: 2.5em;
+    text-align: center;
+}
 nav{
     display:flex;
     justify-content: center;
@@ -41,23 +45,40 @@ aside{
     align-items: center;
     grid-area: aside;
     background-color: #f0ece1;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .box-vader{
-    width: 40px;
-    height: 40px;
-    margin-left: 1em;
+    display: none;
 }
 .style-link{
     display: flex;
     gap: 5px;
     margin-right: 1em;
 }
+.style-link a{
+    text-decoration: none;
+    color: #3b444b;
+}
+.style-link a:hover{
+    color: #e5703d;
+}
 main{
     grid-area: main;
     padding-top:1em ;
     padding-bottom: 1em;
+}
+.main-h3{
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+    font-size: 2em;
+}
+.main-h3-2{
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 1.5em;
+    font-size: 2em;
 }
 .grid-cards{
     display: grid;
@@ -109,6 +130,7 @@ aside{
     padding: 2em;
 }
 .box-vader{
+    display: flex;
     width: 100px;
     height: 100px;
     margin: 0;
@@ -119,11 +141,17 @@ aside{
     transform: rotate(360deg);
 }
 .style-link{
-    padding-top: 2em;
+    padding-top: 3em;
     flex-direction: column;
 }
+.style-link a{
+    padding-top: 2em;
+}
+main{
+    overflow-y:auto ;
+}
 .grid-cards{
-    grid-template-columns: auto auto;   
+    grid-template-columns: auto auto; 
 }
 }
 
