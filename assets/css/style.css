@@ -14,6 +14,7 @@
 /* Versión Mobile */
 body{
     background-image: url("/assets/imgs/starwars.jpeg.jpeg");
+    /* background-image: url("/assets/imgs/star-wars-backgrounds-25_bc15ec98.jpeg"); */
     font-family: 'righteousRegular';
 }
 header{
@@ -48,9 +49,9 @@ aside{
     padding-top: 1em;
     padding-bottom: 1em;
 }
-.box-vader{
+/* .box-vader{
     display: none;
-}
+} */
 .style-link{
     display: flex;
     gap: 5px;
@@ -129,20 +130,43 @@ aside{
     justify-content: flex-start;
     padding: 2em;
 }
-.box-vader{
-    display: flex;
+
+.contenedor{
+    position: relative;
     width: 100px;
     height: 100px;
-    margin: 0;
-    transform: rotate(0deg);
-    transition: transform 4s;
+    overflow: hidden;
 }
-.box-vader:hover{
-    transform: rotate(360deg);
+.box-vader{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 2s ease-in;
+}
+.contenedor .imagen1{
+    opacity: 1;
+}
+.contenedor .imagen2{
+    opacity: 0;
+}
+.contenedor:hover .imagen1{
+    opacity: 0;
+}
+.contenedor:hover .imagen2{
+    opacity: 1;
+}
+.contenedor .imagen1,
+.contenedor .imagen2 {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .style-link{
     padding-top: 3em;
     flex-direction: column;
+}
+.style-link a:hover{
+    color:#e5703d;
 }
 .style-link a{
     padding-top: 2em;
@@ -171,27 +195,30 @@ nav{
     transition:all 2s ease-in;
 }
 nav:hover{
-    background-color: #f0ece1;
-    color: #3b444b;
+    background-color:#9c1b1b;
+    color: #080808;
 }
 aside{
     background-color: #f0ece1;
     color:black;
-    transition: all 2s;
+    transition: all 2s ease-in;
 }
 aside:hover{
-    background-color: #e5703d;
+    background-color: #9c1b1b;
     color: #f0ece1;
 }
-.box-vader{
+.style-link a{
+    font-size: 1.2em;
+    color:#080808;
+}
+.style-link a:hover{
+    color: #f0ece1;
+}
+.contenedor{
+    position: relative;
     width: 150px;
     height: 150px;
-    margin: 0;
-    transition: all 2s;
-}
-.box-vader:hover{
-    width: 250px;
-    height: 250px;
+    overflow: hidden;
 }
 .grid-cards{
     grid-template-columns: auto auto auto;
@@ -202,7 +229,7 @@ footer{
     transition: all 2s;
 }
 footer:hover{
-    background-color: #f0ece1;
-    color: #3b444b;
+    background-color: #080808;
+    color: #f0ece1
 }
 }
