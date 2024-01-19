@@ -13,7 +13,7 @@
 }
 /* Versión Mobile */
 body{
-    background-image: url("/assets/imgs/starwars.jpeg.jpeg");
+    background-image: url('../imgs/starwars.jpeg.jpeg');
     /* background-image: url("/assets/imgs/star-wars-backgrounds-25_bc15ec98.jpeg"); */
     font-family: 'righteousRegular';
 }
