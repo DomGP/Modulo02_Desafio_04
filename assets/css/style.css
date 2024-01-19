@@ -181,6 +181,13 @@ aside{
 main{
     overflow-y:auto ;
 }
+#img-spin{
+    transform: rotateY(0deg);
+    transition: transform 6s ease-in;
+}
+#img-spin:hover{
+    transform:rotateY(360deg);
+}
 .grid-cards{
     grid-template-columns: auto auto; 
 }
